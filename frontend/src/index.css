@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+body {
+  font-family: system-ui, sans-serif;
+}
+/* ============================= */
+/* GLOBAL SMOOTH TRANSITIONS     */
+/* ============================= */
+
+/* smooth everything */
+* {
+  transition: all 180ms ease-in-out;
+}
+
+
+/* nicer buttons */
+button {
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+
+/* inputs focus smooth */
+input, select {
+  transition: border 150ms ease, box-shadow 150ms ease;
+}
+
+
+/* table rows */
+tr {
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+
+/* modal animation */
+@keyframes slideUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUpSmooth 0.25s ease-out;
+}
+
+
+/* toast animation */
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-anim {
+  animation: toastIn 0.2s ease;
+}
