@@ -35,7 +35,7 @@ public class SecurityConfig {
 
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(
-                List.of("http://localhost:5173", "http://localhost","http://localhost:3000")
+                List.of("http://localhost:5173", "http://localhost","http://localhost:3000","https://dashcraft017.vercel.app")
         );
         config.setAllowedMethods(List.of("*"));
         config.setAllowedHeaders(List.of("*"));
